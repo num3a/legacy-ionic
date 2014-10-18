@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $ionicLoading) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -36,15 +36,20 @@ angular.module('starter.controllers', [])
       var username = $scope.loginData.username;
       var password = $scope.loginData.password;
 
+      $ionicLoading.show({
+          template: 'Loading...'
+      });
+
       Parse.User.logIn(username, password, {
           success: function(user) {
 
             $scope.closeLogin();
-
+              $ionicLoading.hide();
               $state.transitionTo('app.latest');
           },
           error: function(user, error) {
               // The login failed. Check error to see why.
+              $ionicLoading.hide();
           }
       });
 
