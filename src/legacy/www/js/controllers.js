@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $ionicLoading) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup) {
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -50,6 +50,13 @@ angular.module('starter.controllers', [])
           error: function(user, error) {
               // The login failed. Check error to see why.
               $ionicLoading.hide();
+              
+            $ionicPopup.alert({
+              title: 'Ooops !',
+              template: 'Error: ' + error.message
+            });
+          
+      
           }
       });
 
