@@ -75,6 +75,7 @@ angular.module('starter.controllers', [])
 })
     .controller('LatestsCtrl', function($scope){
 
+
         function getLatestPost() {
             return [
                 {
@@ -82,12 +83,41 @@ angular.module('starter.controllers', [])
                     avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
                 },
                 {
+                    image : "img/media/simpson.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "img/media/design.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
                     image : "http://images.playfrance.com/news/64941/zoom/0297.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "img/media/simpson.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "img/media/design.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "http://images.playfrance.com/news/64941/zoom/0297.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "img/media/simpson.jpg",
+                    avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
+                },
+                {
+                    image : "img/media/design.jpg",
                     avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
                 }
             ]
         }
 
+        $scope.hideBackButton = true;
         $scope.latest = getLatestPost();
     })
 .controller('PlaylistCtrl', function($scope, $stateParams) {
