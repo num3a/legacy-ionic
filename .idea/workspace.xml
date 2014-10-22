@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ee00065-2d10-4b79-a2eb-72f5f02682b5" name="Default" comment="Add Jasmine running with karma and require">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/legacy/www/templates/menu.html" afterPath="$PROJECT_DIR$/src/legacy/www/templates/menu2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/legacy/www/js/app.js" afterPath="$PROJECT_DIR$/src/legacy/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/legacy/www/js/controllers.js" afterPath="$PROJECT_DIR$/src/legacy/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/legacy/www/index.html" afterPath="$PROJECT_DIR$/src/legacy/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/legacy/www/templates/menu2.html" afterPath="" />
     </list>
     <ignored path="legacy-ionic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1065">
+            <state vertical-scroll-proportion="0.10368664" vertical-offset="0" max-vertical-offset="1065">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
@@ -84,16 +78,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/legacy/www/templates/menu2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="600">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="leftMenu.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leftMenu.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="leftMenu.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7119816" vertical-offset="6" max-vertical-offset="585">
+            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="585">
               <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
@@ -742,26 +726,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js</url>
-          <line>10</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js</url>
-          <line>6</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="6" />
+          <line>13</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1087,14 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/legacy/www/templates/menu2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="600">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/legacy/www/components/introduction/intro.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
@@ -1119,14 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="600">
@@ -1145,12 +1103,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/legacy/www/components/sideMenu/leftMenu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7119816" vertical-offset="6" max-vertical-offset="585">
+        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="585">
           <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
             <element signature="e#1040#1917#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10368664" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
