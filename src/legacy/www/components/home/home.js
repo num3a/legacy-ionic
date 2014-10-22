@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Application', ['ngResource']).
+angular.module('appli', ['ngResource']).
     factory('UserFactory', function($resource){
     return $resource('Users/users.json')
 })
@@ -9,5 +9,9 @@ angular.module('Application', ['ngResource']).
     $scope.users = [{
         name: 'yea',
         id: 2
-    }];
+    },
+        {
+            name: 'lool',
+            id:4
+        }];
 });

@@ -10,33 +10,38 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine',
-      'requirejs'
+    frameworks: [
+        'jasmine',
+        'requirejs'
     ],
 
 
     // list of files / patterns to load in the browser
     files: [
-     '../node_modules/requirejs/require.js',
-      '../node_modules/karma-requirejs/adapter.js',
+        '../node_modules/requirejs/require.js',
+        '../node_modules/karma-requirejs/adapter.js',
 
-     '../node_modules/karma-jasmine/lib/jasmine.js',
-      '../node_modules/karma-jasmine/lib/adapter.js',
+        '../node_modules/karma-jasmine/lib/jasmine.js',
+        '../node_modules/karma-jasmine/lib/adapter.js',
 
-
-      'test-main.js',
+        'test-main.js',
         {pattern: '../www/lib/angular/angular.js', included: true},
 
-      {pattern: '../www/js/**.js', included: true},
-      {pattern: '../www/js/**/*.js', included: true},
-      {pattern: '../www/js/**/**/*.js', included: true},
+        {pattern: '../www/js/**.js', included: true},
+        {pattern: '../www/js/**/*.js', included: true},
+        {pattern: '../www/js/**/**/*.js', included: true},
 
-      {pattern: '../tests/*.js', included: true},
-      {pattern: '../tests/**/*.js', included: true},
-      {pattern: '../tests/**/**/*.js', included: true},
+
+        {pattern: '../www/components/**.js', included: true},
+        {pattern: '../www/components/**/*.js', included: true},
+        {pattern: '../www/components/**/**/*.js', included: true},
+
+        {pattern: '../tests/*.js', included: true},
+        {pattern: '../tests/**/*.js', included: true},
+        {pattern: '../tests/**/**/*.js', included: true},
+
         {pattern: 'angular-resource.js', included: true},
-
-      {pattern: 'angular-mocks.js', included: true}
+        {pattern: 'angular-mocks.js', included: true}
 
     ],
 
@@ -49,8 +54,10 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    /*preprocessors: {
+        '../components/*.js': ['coverage']
+        //'../js/*.js': ['coverage']
+    },*/
 
 
     // test results reporter to use
@@ -73,17 +80,23 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
+    //  plugins: ['karma-coverage'],
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: [
 
-        //'Chrome',
-      'PhantomJS'
+        'Chrome'
+        ,'PhantomJS'
     ],
 
+      // optionally, configure the reporter
+     /* coverageReporter: {
+          type : 'html',
+          dir : 'coverage/'
+      },*/
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits

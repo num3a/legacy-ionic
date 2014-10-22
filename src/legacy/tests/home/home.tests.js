@@ -5,7 +5,7 @@ describe('MainCtrl', function(){
     var scope, $httpBackend;//we'll use these in our tests
 
     //mock Application to allow us to inject our own dependencies
-    beforeEach(angular.mock.module('Application'));
+    beforeEach(angular.mock.module('appli'));
     //mock the controller for the same reason and include $rootScope and $controller
     beforeEach(angular.mock.inject(function($rootScope, $controller, _$httpBackend_){
         $httpBackend = _$httpBackend_;
@@ -21,7 +21,7 @@ describe('MainCtrl', function(){
         expect(scope.text).toBe('Hello World!');
     });
     it('should fetch list of users', function(){
-        expect(scope.users.length).toBe(1);
+        expect(scope.users.length).toBe(2);
         expect(scope.users[0].name).toBe('yea');
     });
 });
