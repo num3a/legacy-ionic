@@ -1,4 +1,4 @@
-<ion-view title="Browse" hide-back-button="{{hideBackButton}}">
+<ion-view title="Latest" hide-back-button="{{hideBackButton}}">
     <ion-nav-buttons side="left">
         <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
@@ -23,7 +23,14 @@
 
         </div>
 
-
-
     </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+        <div class="buttons">
+            <button class="button">Left Button</button>
+        </div>
+        <h1 class="title">Title!</h1>
+        <div class="buttons" ng-click="doSomething()">
+            <button class="button">Right Button</button>
+        </div>
+    </ion-footer-bar>
 </ion-view>
