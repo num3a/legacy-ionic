@@ -14,7 +14,9 @@ angular.module('starter.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
 })
-    .controller('LatestsCtrl', function($scope){
+    .controller('LatestsCtrl', function($scope, $ionicViewService){
+
+        $ionicViewService.clearHistory();
 
 
         function getLatestPost() {

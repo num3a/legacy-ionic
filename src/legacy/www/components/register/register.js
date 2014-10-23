@@ -40,7 +40,7 @@ angular.module('registration', [])
                     switch(error.code)
                     {
                         case -1:
-                            errorMessage = "User cannot register with an empty name."
+                            errorMessage = "Please fill all fields."
                             break;
                         case 202:
                             errorMessage= "User " + username + " already exist."
