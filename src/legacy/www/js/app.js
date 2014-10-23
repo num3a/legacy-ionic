@@ -23,7 +23,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'introduction','sideM
       });
     })
 
-    .config(function($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider ) {
+
       $stateProvider
 
           .state('app', {
@@ -108,6 +109,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'introduction','sideM
 
 
       // if none of the above states are matched, use this as the fallback
-      $urlRouterProvider.otherwise('/app/intro');
+
+     /*   var isFirstLaunch = $localStorage.get('isFirstLaunch', true);
+
+        if(isFirstLaunch){
+            $localStorage.set('isFirstLaunch', false );
+            $urlRouterProvider.otherwise('/app/intro');
+        }
+        else
+        {*/
+            $urlRouterProvider.otherwise('/app/intro');
+
     });
 

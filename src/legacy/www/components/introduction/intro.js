@@ -2,8 +2,10 @@
  * Created by emmanuelernest on 21/10/14.
  */
 
-angular.module('introduction', [])
-.controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate){
+angular.module('introduction', ['legacy.utils'])
+.controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate, $localStorage){
+
+        skipIntro();
 
         $ionicSideMenuDelegate.canDragContent(false);
 
@@ -25,5 +27,18 @@ angular.module('introduction', [])
         $scope.slideChanged = function(index) {
             $scope.slideIndex = index;
         };
+
+        function skipIntro(){
+            var isFirstLaunch = $localStorage.get('isFirstLaunch', 'true');
+
+            if(isFirstLaunch == 'true'){
+                $localStorage.set('isFirstLaunch', false );
+
+            }
+            else
+            {
+                $state.go('app.login');
+            }
+        }
 });
 
