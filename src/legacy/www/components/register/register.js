@@ -28,10 +28,13 @@ angular.module('registration', [])
 
             user.signUp(null, {
                 success: function(user) {
+                    $ionicLoading.hide();
+
                     login(username,password);
                 },
                 error: function(user, error) {
                     // Show the error message somewhere and let the user try again.
+                    $ionicLoading.hide();
 
                     var errorMessage = '';
                     switch(error.code)
