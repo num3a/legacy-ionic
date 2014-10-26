@@ -1,6 +1,5 @@
-/**
- * Created by emmanuelernest on 23/10/14.
- */
+'use strict';
+
 angular.module('login', [])
     .controller('LoginCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService) {
 
