@@ -15,7 +15,7 @@ angular.module('legacy.controllers', ['ngCordova'])
 
         $scope.latitude = 0;
         $scope.longitude = 0;
-        $scope.isGeolocated = false;
+        $scope.isGeolocated = true;
         $ionicViewService.clearHistory();
 
         $scope.takePhoto = function() {
@@ -34,7 +34,16 @@ angular.module('legacy.controllers', ['ngCordova'])
             $cordovaCamera.getPicture(options).then(function(imageData) {
                 // Success! Image data is here
 
-                sendImage(imageData);
+                String.prototype.getBytes = function () {
+                    var bytes = [];
+                    for (var i = 0; i < this.length; ++i) {
+                        bytes.push(this.charCodeAt(i));
+                    }
+                    return bytes;
+                };
+
+                var bytesData = imageData.getBytes();
+                sendImage(bytesData);
             }, function(err) {
                 // An error occured. Show a message to the user
             });

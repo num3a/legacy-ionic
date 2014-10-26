@@ -3,6 +3,8 @@
 angular.module('login', [])
     .controller('LoginCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService) {
 
+        //TODO: save current logged user
+
         $ionicViewService.clearHistory();
         $ionicSideMenuDelegate.canDragContent(false);
         $scope.hideBackButton = true;
