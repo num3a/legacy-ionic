@@ -1,4 +1,4 @@
-angular.module('legacy.controllers', [])
+angular.module('legacy.controllers', ['ngCordova'])
     .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
@@ -9,10 +9,46 @@ angular.module('legacy.controllers', [])
     { title: 'Cowbell', id: 6 }
   ];
 })
-    .controller('LatestsCtrl', function($scope, $ionicViewService){
+    .controller('LatestsCtrl', function($scope, $ionicViewService, $cordovaGeolocation, $cordovaCamera,$ionicLoading){
+        //TODO: Refactor latest controller
+        //TODO: add parse service angular module
 
+        $scope.latitude = 0;
+        $scope.longitude = 0;
+        $scope.isGeolocated = false;
         $ionicViewService.clearHistory();
 
+        $scope.takePhoto = function() {
+            var options = {
+                quality : 10,
+                destinationType : Camera.DestinationType.DATA_URL,
+                sourceType : Camera.PictureSourceType.CAMERA,
+                allowEdit : true,
+                encodingType: Camera.EncodingType.JPEG,
+                targetWidth: 100,
+                targetHeight: 100,
+                popoverOptions: CameraPopoverOptions,
+                saveToPhotoAlbum: false
+            };
+
+            $cordovaCamera.getPicture(options).then(function(imageData) {
+                // Success! Image data is here
+
+                sendImage(imageData);
+            }, function(err) {
+                // An error occured. Show a message to the user
+            });
+        };
+
+        $cordovaGeolocation.getCurrentPosition()
+            .then(function (position) {
+                $scope.latitude  = position.coords.latitude;
+                $scope.longitude = position.coords.longitude;
+
+                $scope.isGeolocated = true;
+            }, function(err) {
+                // error
+            });
 
         function getLatestPost() {
             return [
@@ -53,6 +89,23 @@ angular.module('legacy.controllers', [])
                     avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg"
                 }
             ]
+        }
+
+        function sendImage(imageData) {
+
+            $ionicLoading.show({
+                template: 'Sending ...'
+            });
+            var file = new Parse.File("myfile.zzz", imageData, "image/jpg");
+            file.save().then(function () {
+                // The file has been saved to Parse.
+                $ionicLoading.hide();
+            }, function (error) {
+                aler(error);
+                // The file either could not be read, or could not be saved to Parse.
+            });
+
+
         }
 
         $scope.hideBackButton = true;
