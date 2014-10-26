@@ -1,10 +1,5 @@
-angular.module('starter.controllers', [])
-
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup) {
-
-})
-
-.controller('PlaylistsCtrl', function($scope) {
+angular.module('legacy.controllers', [])
+    .controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
