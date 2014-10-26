@@ -56,6 +56,7 @@ describe('Unit: Login controller', function(){
         expect($scope.doLogin).toBeDefined();
         expect(false).toBe(true);
 
+        //TODO: finish unit testing for login method
     });
 
 });
