@@ -1,6 +1,7 @@
 /**
  * Created by emmanuelernest on 20/10/14.
  */
+//TODO : Add tests to cover login functionality
 describe('Unit: Login controller', function(){
     var $scope, ctrl, $timeout;
 
@@ -49,12 +50,18 @@ describe('Unit: Login controller', function(){
 
     it('WIP: User login with account',function(){
 
-        $scope.loginData.login = 'userTest';
-        $scope.loginData.password = 'test';
+        $scope.loginData.username = 'userTest';
+        $scope.loginData.password = 'passwordTest';
         expect($scope.loginData).toBeDefined();
 
         expect($scope.doLogin).toBeDefined();
 
+        spyOn(Parse.User, 'logIn');
+
+        $scope.doLogin();
+
+        expect(Parse.User.logIn).toHaveBeenCalledWith('userTest','passwordTest',
+                      jasmine.objectContaining({success: jasmine.any(Function), error:jasmine.any(Function)}));
         //TODO: finish unit testing for login method
     });
 

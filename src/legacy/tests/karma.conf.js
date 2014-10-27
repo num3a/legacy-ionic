@@ -100,7 +100,7 @@ module.exports = function(config) {
         browsers: [
 
              'Chrome'
-            ,'PhantomJS'
+            //,'PhantomJS'
         ],
 
         // optionally, configure the reporter

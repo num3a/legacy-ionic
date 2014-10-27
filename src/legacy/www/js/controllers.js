@@ -105,7 +105,7 @@ angular.module('legacy.controllers', ['ngCordova'])
             $ionicLoading.show({
                 template: 'Sending ...'
             });
-            var file = new Parse.File("myfile.zzz", imageData, "image/jpg");
+            var file = new Parse.File("myfile.png", imageData, "image/png");
             file.save().then(function () {
                 // The file has been saved to Parse.
                 $ionicLoading.hide();

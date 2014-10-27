@@ -2,8 +2,7 @@
  * Created by emmanuelernest on 20/10/14.
  */
 
-//TODO: configure iOS localStorage
-//http://learn.ionicframework.com/formulas/localstorage/
+// http://learn.ionicframework.com/formulas/localstorage/
 
 angular.module('legacy.utils', [])
 
