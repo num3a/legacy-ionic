@@ -18,6 +18,7 @@ angular.module('login', [])
         };
 
         // Perform the login action when the user submits the login form
+        //TODO: username policy - do not allow space in username
         $scope.doLogin = function () {
             console.log('Doing login', $scope.loginData);
 

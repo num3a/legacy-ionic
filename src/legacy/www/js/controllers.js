@@ -35,16 +35,16 @@ angular.module('legacy.controllers', ['ngCordova'])
             $cordovaCamera.getPicture(options).then(function(imageData) {
                 // Success! Image data is here
 
-                String.prototype.getBytes = function () {
+              /*  String.prototype.getBytes = function () {
                     var bytes = [];
                     for (var i = 0; i < this.length; ++i) {
                         bytes.push(this.charCodeAt(i));
                     }
                     return bytes;
-                };
+                };*/
 
-                var bytesData = imageData.getBytes();
-                sendImage(bytesData);
+               // var bytesData = imageData.getBytes();
+                sendImage(imageData);
             }, function(err) {
                 // An error occured. Show a message to the user
             });
@@ -106,7 +106,7 @@ angular.module('legacy.controllers', ['ngCordova'])
             $ionicLoading.show({
                 template: 'Sending ...'
             });
-            var file = new Parse.File("myfile.png", imageData, "image/png");
+            var file = new Parse.File("myfile.png",{base64: imageData} );
             file.save().then(function () {
                 // The file has been saved to Parse.
                 $ionicLoading.hide();
