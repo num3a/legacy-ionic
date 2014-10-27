@@ -31,6 +31,7 @@ angular.module('legacy.controllers', ['ngCordova'])
                 saveToPhotoAlbum: false
             };
 
+            //TODO: add login everywhere in the application
             $cordovaCamera.getPicture(options).then(function(imageData) {
                 // Success! Image data is here
 

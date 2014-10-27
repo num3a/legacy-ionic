@@ -2,235 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ee00065-2d10-4b79-a2eb-72f5f02682b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/.bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/.npmignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/3.14.5.9.flags.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/CONTRIBUTORS" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/README.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/_.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/appveyor.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/_/argv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/test/basic.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/bench.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/_/bin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/boolean_double.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/boolean_single.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/test/brace-expand.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/test/break.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/test/caching.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/example/center.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/component.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/dash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/dash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/default_bool.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/default_hash.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/default_singles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/test/defaults.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/src/defaults.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/divide.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/dotted.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/test/bin/exit_code.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/test/extglob-ending-with-state-char.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/fetch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/completion/fish" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/test/foreach.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/graceful-fs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/test/idleness.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/test/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/dist/karma.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/src/layouting.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/line_count.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/line_count_options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/line_count_wrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/long.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/example/meat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/test/memory-leak.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/minimatch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/src/mixins.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/nonopt.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/num.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/test/open.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/async-each/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/lru-cache/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/example/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/parse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/parse_modified.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/parse_modified.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/polyfills.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/graceful-fs/test/readdir-sort.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/readme.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/readme.markdown" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/readme.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/reflect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/lib/reorder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/src/reset.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/lib/respawn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/test/bin/respawner.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/short.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/short.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/short.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/istanbul/node_modules/fileset/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma/node_modules/chokidar/node_modules/readdirp/node_modules/minimatch/node_modules/sigmund/sigmund.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/liftoff/node_modules/flagged-respawn/test/bin/signal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/string.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/v8flags/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/legacy/www/lib/karma/src/typography.styl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/usage-options.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/usage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/minimist/test/whitespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/test/whitespace.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/node_modules/wordwrap/test/wrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/karma-coverage/node_modules/ibrik/node_modules/coffee-script-redux/node_modules/esmangle/node_modules/optimist/example/xup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/legacy/www/js/controllers.js" afterPath="$PROJECT_DIR$/src/legacy/www/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="legacy-ionic.iws" />
@@ -296,14 +68,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.tests.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.tests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/legacy/tests/unit/login/login.tests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23376623" vertical-offset="255" max-vertical-offset="1260">
+            <state vertical-scroll-proportion="-3.4615386" vertical-offset="255" max-vertical-offset="1260">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#1275#1329#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34108528" vertical-offset="363" max-vertical-offset="1965">
+              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -573,6 +355,66 @@
               <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sideMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy-ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy-ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy-ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy-ionic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="legacy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="register" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -634,58 +476,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy-ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy-ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy-ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy-ionic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="legacy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -717,7 +507,7 @@
       <recent name="$PROJECT_DIR$/src/legacy/snippets" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Debug Chrome">
+  <component name="RunManager" selected="PhoneGap/Cordova.Run Android">
     <configuration default="false" name="login.tests.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="/usr/local/bin/node" path-to-js-file="login.tests.js" working-dir="$PROJECT_DIR$/src/legacy/tests/login">
       <RunnerSettings RunnerId="debuggableProgram" />
       <ConfigurationWrapper RunnerId="debuggableProgram" />
@@ -1010,7 +800,13 @@
       <option name="project" value="LOCAL" />
       <updated>1414447585139</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add modules to git">
+      <created>1414447722725</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1414447722725</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -1035,9 +831,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977098" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63206106" sideWeight="0.49960285" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32824427" sideWeight="0.49960285" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38625956" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1051,7 +847,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.273021" sideWeight="0.49879518" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36641222" sideWeight="0.7342488" order="2" side_tool="false" content_ui="tabs" x="10" y="285" width="1205" height="249" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36641222" sideWeight="0.7342488" order="2" side_tool="false" content_ui="tabs" x="10" y="285" width="1205" height="249" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1117,7 +913,8 @@
     <MESSAGE value="WIP send image" />
     <MESSAGE value="Add tests on login&#10;" />
     <MESSAGE value="Add test on login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test on login" />
+    <MESSAGE value="Add modules to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add modules to git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1134,12 +931,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/legacy/www/js/controllers.js</url>
-          <line>53</line>
+          <line>54</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/legacy/www/js/controllers.js</url>
-          <line>62</line>
+          <line>63</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1478,14 +1275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4651163" vertical-offset="0" max-vertical-offset="1950">
-          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/legacy/www/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17728531" vertical-offset="26" max-vertical-offset="1950">
@@ -1555,11 +1344,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/legacy/tests/unit/login/login.tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23376623" vertical-offset="255" max-vertical-offset="1260">
+        <state vertical-scroll-proportion="-3.4615386" vertical-offset="255" max-vertical-offset="1260">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#1275#1329#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/legacy/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34108528" vertical-offset="363" max-vertical-offset="1965">
+          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
