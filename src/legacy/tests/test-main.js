@@ -20,6 +20,8 @@ require.config({
   // dynamically load all test files
   deps: allTestFiles,
 
+  urlArgs: { 'bust': (new Date()).getTime() },
+
   // we have to kickoff jasmine, as it is asynchronous
   callback: window.__karma__.start
 });

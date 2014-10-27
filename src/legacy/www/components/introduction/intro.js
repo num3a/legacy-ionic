@@ -2,7 +2,7 @@
  * Created by emmanuelernest on 21/10/14.
  */
 
-angular.module('introduction', ['legacy.utils'])
+angular.module('introduction', ['legacy.utils.localStorage'])
 .controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate, $localStorage){
 
         skipIntro();

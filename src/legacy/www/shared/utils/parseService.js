@@ -7,13 +7,16 @@
 
 // http://learn.ionicframework.com/formulas/localstorage/
 
-angular.module('legacy.utils', [])
+angular.module('legacy.utils.parse', [])
 
-    .factory('parse', ['$window', function($window) {
+    .factory('$parseService', ['', function() {
         //TODO: Initialize parse
-        var factory = {};
 
-        factory.logIn = function(){
+      return{
+          login:function(){}
+      };
+
+       /*factory.logIn = function(){
 
         };
 
@@ -29,9 +32,5 @@ angular.module('legacy.utils', [])
 
         };
 
-        factory.login = function(){
-
-        };
-
-        return factory;
+        return factory;*/
     }]);

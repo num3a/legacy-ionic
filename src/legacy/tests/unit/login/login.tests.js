@@ -3,7 +3,7 @@
  */
 //TODO : Add tests to cover login functionality
 describe('Unit: Login controller', function(){
-    var $scope, ctrl, $timeout;
+    var $scope, ctrl, $timeout, $state;
 
     //mock Application to allow us to inject our own dependencies
     //mock the controller for the same reason and include $rootScope and $controller
@@ -17,10 +17,14 @@ describe('Unit: Login controller', function(){
         // $controller - injected to create an instance of our controller.
         // $q - injected so we can create promises for our mocks.
         // _$timeout_ - injected to we can flush unresolved promises.
-        inject(function ($rootScope, $controller, $q, _$timeout_) {
+        inject(function ($rootScope, $controller, $q, _$timeout_, $state) {
 
             // create a scope object for us to use.
             $scope = $rootScope.$new();
+
+            var mockParseService = { login:function(){}};
+
+//            $provide.value('$parseService',mockParseService);
 
             // assign $timeout to a scoped variable so we can use
             // $timeout.flush() later. Notice the _underscore_ trick
@@ -35,6 +39,9 @@ describe('Unit: Login controller', function(){
             ctrl = $controller("LoginCtrl", {
                 $scope: $scope
             });
+
+            spyOn($state,'transitionTo');
+
         });
 
     });
@@ -62,7 +69,15 @@ describe('Unit: Login controller', function(){
 
         expect(Parse.User.logIn).toHaveBeenCalledWith('userTest','passwordTest',
                       jasmine.objectContaining({success: jasmine.any(Function), error:jasmine.any(Function)}));
+
         //TODO: finish unit testing for login method
     });
 
+    it('User tap on registration button',inject(function($state){
+        expect($scope.goRegistration).toBeDefined();
+
+        $scope.goRegistration();
+
+        expect($state.transitionTo).toHaveBeenCalledWith('app.register');
+    }));
 });

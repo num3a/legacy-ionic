@@ -16,16 +16,24 @@ module.exports = function(config) {
         ],
 
 
-        // list of files / patterns to load in the browser
-        files: [
-            '../node_modules/requirejs/require.js',
-            '../node_modules/karma-requirejs/adapter.js',
 
-            '../node_modules/karma-jasmine/lib/jasmine.js',
-            '../node_modules/karma-jasmine/lib/adapter.js',
+         // list of files / patterns to load in the browser
+        files: [
+            //'../node_modules/requirejs/require.js',
+            //'../node_modules/karma-requirejs/adapter.js',
+
+          //  '../node_modules/karma-jasmine/lib/jasmine.js',
+            //'../node_modules/karma-jasmine/lib/adapter.js',
 
             'test-main.js',
-            {pattern: '../www/lib/ionic/js/ionic.bundle.js', included: true},
+            {pattern: '../www/lib/angular/angular.js', included: true},
+            {pattern: '../www/lib/angular-animate/angular-animate.js', included: true},
+            {pattern: '../www/lib/angular-ui-router/release/angular-ui-router.js', included: true},
+            {pattern: '../www/lib/angular-sanitize/angular-sanitize.js', included: true},
+
+            {pattern: '../www/lib/ionic/js/ionic.js', included: true},
+            {pattern: '../www/lib/ionic/js/ionic-angular.js', included: true},
+
             {pattern: 'angular/angular-mocks.js', included: true},
 
             {pattern: '../www/js/**.js', included: true},
@@ -37,9 +45,9 @@ module.exports = function(config) {
             {pattern: '../www/components/**/*.js', included: true},
             {pattern: '../www/components/**/**/*.js', included: true},
 
-            {pattern: '../tests/*.js', included: true},
-            {pattern: '../tests/**/*.js', included: true},
-            {pattern: '../tests/**/**/*.js', included: true},
+            {pattern: '../tests/unit/*.js', included: true},
+            {pattern: '../tests/unit/**/*.js', included: true},
+            {pattern: '../tests/unit/**/**/*.js', included: true},
 
             {pattern: '../www/shared/utils/*.js', included: true},
 
@@ -68,7 +76,6 @@ module.exports = function(config) {
             //'../js/*.js': ['coverage']
     },
 
-
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
@@ -78,10 +85,10 @@ module.exports = function(config) {
         // web server port
         port: 9876,
 
+        runnerPort : 9100,
 
         // enable / disable colors in the output (reporters and logs)
         colors: true,
-
 
         // level of logging
         // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
@@ -91,7 +98,8 @@ module.exports = function(config) {
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,
 
-        usePolling: false,
+        captureTimeout: 60000,
+
 
         //  plugins: ['karma-coverage'],
 
@@ -99,8 +107,8 @@ module.exports = function(config) {
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: [
 
-             'Chrome'
-            //,'PhantomJS'
+             //'Chrome'
+            ,'PhantomJS'
         ],
 
         // optionally, configure the reporter
