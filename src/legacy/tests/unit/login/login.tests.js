@@ -55,7 +55,7 @@ describe('Unit: Login controller', function(){
         expect($scope.hideBackButton).toBe(true);
     });
 
-    it('WIP: User login with account',function(){
+    it('User login with account',function(){
 
         $scope.loginData.username = 'userTest';
         $scope.loginData.password = 'passwordTest';
@@ -70,7 +70,6 @@ describe('Unit: Login controller', function(){
         expect(Parse.User.logIn).toHaveBeenCalledWith('userTest','passwordTest',
                       jasmine.objectContaining({success: jasmine.any(Function), error:jasmine.any(Function)}));
 
-        //TODO: finish unit testing for login method
     });
 
     it('User tap on registration button',inject(function($state){

@@ -106,7 +106,9 @@ angular.module('legacy.controllers', ['ngCordova'])
             $ionicLoading.show({
                 template: 'Sending ...'
             });
+
             var file = new Parse.File("myfile.png",{base64: imageData} );
+
             file.save().then(function () {
                 // The file has been saved to Parse.
                 $ionicLoading.hide();
@@ -114,7 +116,6 @@ angular.module('legacy.controllers', ['ngCordova'])
                 aler(error);
                 // The file either could not be read, or could not be saved to Parse.
             });
-
 
         }
 
