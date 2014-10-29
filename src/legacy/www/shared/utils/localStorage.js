@@ -4,9 +4,9 @@
 
 // http://learn.ionicframework.com/formulas/localstorage/
 
-angular.module('legacy.utils.localStorage', [])
+angular.module('utils.localStorage', [])
 
-    .factory('$localStorage', ['$window', function($window) {
+    .factory('localStorage', ['$window', function($window) {
         return {
             set: function(key, value) {
                 $window.localStorage[key] = value;

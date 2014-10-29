@@ -3,14 +3,21 @@
  */
 //TODO : Add tests to cover login functionality
 describe('Unit: Login controller', function(){
-    var $scope, ctrl, $timeout, $state;
+    var $scope, ctrl, $timeout, $state, parseService;
 
     //mock Application to allow us to inject our own dependencies
     //mock the controller for the same reason and include $rootScope and $controller
     // Load the module
     beforeEach(function () {
 
-        module("legacyApp");
+        var parseServiceMock = {
+            logIn: jasmine.createSpy('logIn')
+        };
+
+        module('legacyApp');
+        module('utils.parse',function ($provide) {
+            $provide.value('parseService', parseServiceMock);
+        });
 
         // INJECT! This part is critical
         // $rootScope - injected to create a new $scope instance.
@@ -21,10 +28,6 @@ describe('Unit: Login controller', function(){
 
             // create a scope object for us to use.
             $scope = $rootScope.$new();
-
-            var mockParseService = { login:function(){}};
-
-//            $provide.value('$parseService',mockParseService);
 
             // assign $timeout to a scoped variable so we can use
             // $timeout.flush() later. Notice the _underscore_ trick
@@ -41,36 +44,32 @@ describe('Unit: Login controller', function(){
             });
 
             spyOn($state,'transitionTo');
-
+           // spyOn($parseService,'logIn');
         });
 
     });
 
     it('Controller initial state',function(){
         expect($scope).toBeDefined();
-
         expect($scope.doLogin).toBeDefined();
 
         expect($scope.loginData).toEqual({});
         expect($scope.hideBackButton).toBe(true);
     });
 
-    it('User login with account',function(){
+    it('User login with account',inject(function(parseService){
 
         $scope.loginData.username = 'userTest';
         $scope.loginData.password = 'passwordTest';
+
         expect($scope.loginData).toBeDefined();
 
         expect($scope.doLogin).toBeDefined();
 
-        spyOn(Parse.User, 'logIn');
-
         $scope.doLogin();
 
-        expect(Parse.User.logIn).toHaveBeenCalledWith('userTest','passwordTest',
-                      jasmine.objectContaining({success: jasmine.any(Function), error:jasmine.any(Function)}));
-
-    });
+        expect(parseService.logIn).toHaveBeenCalledWith('userTest','passwordTest');
+    }));
 
     it('User tap on registration button',inject(function($state){
         expect($scope.goRegistration).toBeDefined();

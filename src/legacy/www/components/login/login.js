@@ -1,11 +1,7 @@
-'use strict';
-
-angular.module('login', [])
-    .controller('LoginCtrl',function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService) {
+angular.module('login', ['utils.parse'])
+    .controller('LoginCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService, parseService) {
 
         //TODO: save current logged user
-
-        //$parseService.login();
 
         $ionicViewService.clearHistory();
         $ionicSideMenuDelegate.canDragContent(false);
@@ -20,49 +16,14 @@ angular.module('login', [])
         // Perform the login action when the user submits the login form
         //TODO: username policy - do not allow space in username
         $scope.doLogin = function () {
-            console.log('Doing login', $scope.loginData);
-
             var username = $scope.loginData.username;
             var password = $scope.loginData.password;
 
-            $ionicLoading.show({
-                template: 'Logging in...'
-            });
-            Parse.User.logIn(username, password, {
-                success: function (user) {
-
-                    $ionicLoading.hide();
-                    $state.transitionTo('app.latest');
-                },
-                error: function (user, error) {
-                    // The login failed. Check error to see why.
-
-                    var errorMessage = '';
-                    switch (error.code) {
-                        case 100:
-                            errorMessage = 'Legacy is unreachable. <br />Please check your network settings!';
-                            break;
-
-                        case 101:
-                            errorMessage = 'Wrong login/password. <br />Please check your credentials!';
-                            break;
-                        default :
-                            errorMessage = error.message;
-                            break;
-                    }
-
-                    $ionicLoading.hide();
-
-                    $ionicPopup.alert({
-                        title: 'Ooops !',
-                        template: errorMessage
-                    });
-                }
-            });
+            parseService.logIn(username,password);
         };
-
+        /*
         $scope.forgotPassword = function () {
-            /*  Parse.User.requestPasswordReset("email@example.com", {
+              Parse.User.requestPasswordReset("email@example.com", {
              success: function() {
              // Password reset request was sent successfully
              },
@@ -70,6 +31,6 @@ angular.module('login', [])
              // Show the error message somewhere
              alert("Error: " + error.code + " " + error.message);
              }
-             });*/
-        };
+             });
+        };*/
     });

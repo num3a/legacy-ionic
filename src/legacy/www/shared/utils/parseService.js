@@ -5,15 +5,49 @@
  * Created by emmanuelernest on 20/10/14.
  */
 
-// http://learn.ionicframework.com/formulas/localstorage/
+angular.module('utils.parse', [])
 
-angular.module('legacy.utils.parse', [])
-
-    .factory('$parseService', ['', function() {
+    .factory('parseService', function($ionicLoading,$state,$ionicPopup) {
         //TODO: Initialize parse
         var factory = {};
 
-       factory.logIn = function(){
+       factory.logIn = function(username,password){
+           console.log('Doing login', {username: username });
+
+           $ionicLoading.show({
+               template: 'Logging in...'
+           });
+           Parse.User.logIn(username, password, {
+               success: function (user) {
+
+                   $ionicLoading.hide();
+                   $state.transitionTo('app.latest');
+               },
+               error: function (user, error) {
+                   // The login failed. Check error to see why.
+
+                   var errorMessage = '';
+                   switch (error.code) {
+                       case 100:
+                           errorMessage = 'Legacy is unreachable. <br />Please check your network settings!';
+                           break;
+
+                       case 101:
+                           errorMessage = 'Wrong login/password. <br />Please check your credentials!';
+                           break;
+                       default :
+                           errorMessage = error.message;
+                           break;
+                   }
+
+                   $ionicLoading.hide();
+
+                   $ionicPopup.alert({
+                       title: 'Ooops !',
+                       template: errorMessage
+                   });
+               }
+           });
 
         };
 
@@ -44,4 +78,4 @@ angular.module('legacy.utils.parse', [])
         };
 
         return factory;
-    }]);
+    });

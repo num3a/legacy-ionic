@@ -2,8 +2,8 @@
  * Created by emmanuelernest on 21/10/14.
  */
 
-angular.module('introduction', ['legacy.utils.localStorage'])
-.controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate, $localStorage){
+angular.module('introduction', ['utils.localStorage'])
+.controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate, localStorage){
 
         skipIntro();
 
@@ -29,10 +29,10 @@ angular.module('introduction', ['legacy.utils.localStorage'])
         };
 
         function skipIntro(){
-            var isFirstLaunch = $localStorage.get('isFirstLaunch', 'true');
+            var isFirstLaunch = localStorage.get('isFirstLaunch', 'true');
 
             if(isFirstLaunch == 'true'){
-                $localStorage.set('isFirstLaunch', false );
+                localStorage.set('isFirstLaunch', false );
 
             }
             else
