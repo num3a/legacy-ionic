@@ -1,7 +1,6 @@
 /**
  * Created by emmanuelernest on 20/10/14.
  */
-//TODO : Add tests to cover login functionality
 describe('Unit: Login controller', function(){
     var $scope, ctrl, $timeout, $state, parseService;
 
@@ -57,7 +56,7 @@ describe('Unit: Login controller', function(){
         expect($scope.hideBackButton).toBe(true);
     });
 
-    it('User login with account',inject(function(parseService){
+    it('User login with userTest account',inject(function(parseService){
 
         $scope.loginData.username = 'userTest';
         $scope.loginData.password = 'passwordTest';

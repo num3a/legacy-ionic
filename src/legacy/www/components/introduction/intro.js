@@ -5,7 +5,7 @@
 angular.module('introduction', ['utils.localStorage'])
 .controller('IntroCtrl',function($scope, $state, $ionicSlideBoxDelegate, $ionicSideMenuDelegate, localStorage){
 
-        skipIntro();
+
 
         $ionicSideMenuDelegate.canDragContent(false);
 
@@ -14,7 +14,7 @@ angular.module('introduction', ['utils.localStorage'])
         };
         // Called to navigate to the main app
         $scope.startApp = function() {
-            $state.go('app.login');
+            $state.transitionTo('app.login');
         };
         $scope.next = function() {
             $ionicSlideBoxDelegate.next();
@@ -28,10 +28,10 @@ angular.module('introduction', ['utils.localStorage'])
             $scope.slideIndex = index;
         };
 
-        function skipIntro(){
+        $scope.skipIntro = function(forceFirstLaunch){
             var isFirstLaunch = localStorage.get('isFirstLaunch', 'true');
 
-            if(isFirstLaunch == 'true'){
+            if(isFirstLaunch == 'true' || forceFirstLaunch){
                 localStorage.set('isFirstLaunch', false );
 
             }
@@ -40,5 +40,7 @@ angular.module('introduction', ['utils.localStorage'])
                 $state.go('app.login');
             }
         }
+
+        $scope.skipIntro();
 });
 
