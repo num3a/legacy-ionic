@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('legacyApp', ['ionic', 'legacy.controllers', 'introduction','sideMenu','registration','login','utils.parse'])
+angular.module('legacyApp', ['ionic', 'introduction','home','sideMenu','registration','login','utils.parse'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -33,34 +33,15 @@ angular.module('legacyApp', ['ionic', 'legacy.controllers', 'introduction','side
             templateUrl: "components/sideMenu/leftMenu.html",
             controller: 'LeftMenuCtrl'
           })
-
-          .state('app.search', {
-            url: "/search",
-            views: {
-              'menuContent' :{
-                templateUrl: "templates/search.html"
+          .state('app.home', {
+              url: "/home",
+              views: {
+                  'menuContent' :{
+                      templateUrl: "components/home/home.html",
+                      controller: 'HomeCtrl'
+                  }
               }
-            }
-          })
-
-          .state('app.browse', {
-            url: "/browse",
-            views: {
-              'menuContent' :{
-                templateUrl: "templates/browse.html"
-              }
-            }
-          })
-          .state('app.playlists', {
-            url: "/playlists",
-            views: {
-              'menuContent' :{
-                templateUrl: "templates/playlists.html",
-                controller: 'PlaylistsCtrl'
-              }
-            }
-          })
-          .state('app.register', {
+          }) .state('app.register', {
             url: "/register",
             views: {
               'menuContent' :{
@@ -78,16 +59,7 @@ angular.module('legacyApp', ['ionic', 'legacy.controllers', 'introduction','side
               }
             }
           })
-          .state('app.latest', {
-            url: "/latest",
-            views: {
-              'menuContent' :{
-                templateUrl: "templates/latest.html",
-                controller: 'LatestsCtrl'
-              }
-            }
-          })
-          .state('app.single', {
+        /*  .state('app.single', {
             url: "/playlists/:playlistId",
             views: {
               'menuContent' :{
@@ -95,7 +67,7 @@ angular.module('legacyApp', ['ionic', 'legacy.controllers', 'introduction','side
                 controller: 'PlaylistCtrl'
               }
             }
-          })
+          })*/
 
           .state('app.introduction',{
             url: "/intro",

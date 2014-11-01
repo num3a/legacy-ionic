@@ -1,13 +1,16 @@
 angular.module('login', ['utils.parse'])
     .controller('LoginCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService, parseService) {
 
-        //TODO: save current logged user
+        //TODO: save current logged user, user Parse.User.getCurrentUser();
 
         $ionicViewService.clearHistory();
         $ionicSideMenuDelegate.canDragContent(false);
         $scope.hideBackButton = true;
         // Form data for the login modal
-        $scope.loginData = {};
+        $scope.loginData = {
+            username: 'num3a',
+            password: 'tobeskin'
+        };
 
         $scope.goRegistration = function () {
             $state.transitionTo('app.register');

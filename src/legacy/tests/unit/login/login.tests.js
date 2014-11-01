@@ -52,7 +52,7 @@ describe('Unit: Login controller', function(){
         expect($scope).toBeDefined();
         expect($scope.doLogin).toBeDefined();
 
-        expect($scope.loginData).toEqual({});
+        expect($scope.loginData).toEqual({ username: 'num3a', password: 'tobeskin'});
         expect($scope.hideBackButton).toBe(true);
     });
 

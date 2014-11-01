@@ -21,7 +21,7 @@ angular.module('utils.parse', [])
                 success: function (user) {
 
                     $ionicLoading.hide();
-                    $state.transitionTo('app.latest');
+                    $state.transitionTo('app.home');
                 },
                 error: function (user, error) {
                     // The login failed. Check error to see why.
@@ -110,23 +110,68 @@ angular.module('utils.parse', [])
 
         };
 
-        factory.postLeg = function(){
+        factory.postLeg = function(text, imageData, location){
             //TODO: WIP send Leg
-            var Leg = new Parse.Object.extend('Leg');
 
-            var imageData = 'mock image data';
-            var file = new Parse.File("avatar.png",{base64: imageData} );
+            var leg = new Parse.Object('Leg');
 
-            var point = new Parse.GeoPoint({latitude: 40.0, longitude: -30.0});
+            var point = new Parse.GeoPoint({latitude: location.latitude, longitude: location.longitude});
 
-            var leg = new Leg();
+            //var leg = new Leg();
 
             leg.set("location", point);
-            leg.set("image", file);
-            leg.set("text", 'zbraaa');
+            leg.set("Text", text);
 
-            leg.save().then(function(model,error){},function(model,error){});
+            if(imageData != null){
+                var file = new Parse.File("image.png",{base64: imageData} );
+                leg.set("Image", file);
+            }
+
+            leg.save().then(function(model,error){
+                console.log('leg posted', model);
+            },function(model,error){
+                console.log('an error occured:',error);
+            });
         };
 
+        factory.getLatestLegs = function(){
+          //  var Leg = Parse.Object('Leg');
+
+            var query = new Parse.Query('Leg');
+
+            //TODO: tune query for retrieving near legs
+           // query.equalTo("playerName", "Dan Stemkoski");
+            query.find({
+                success: function(results) {
+                    console.log("Successfully retrieved " + results.length + " legs.", results);
+
+                    var returnValue = [];
+                    // Do something with the returned Parse.Object values
+                    for (var i = 0; i < results.length; i++) {
+                        var object = results[i];
+
+                        var geoPoint = object.get('location').toJSON();
+                        var text = object.get('Text');
+                        var image = object.get('Image');
+
+                        returnValue.push({
+                            avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg",
+                            text: text,
+                            image: image.url(),
+                            location: {
+                                longitude: geoPoint.longitude,
+                                latitude: geoPoint.latitude
+                            }
+                        });
+                    }
+
+                    return returnValue;
+                },
+                error: function(error) {
+                    console.log("Error: " + error.code + " " + error.message);
+                    return null;
+                }
+            });
+        };
         return factory;
     });
