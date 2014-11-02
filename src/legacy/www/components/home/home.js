@@ -3,7 +3,6 @@
  */
 angular.module('home', ['ngCordova','utils.parse'])
     .controller('HomeCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService,$cordovaCamera, $cordovaGeolocation, parseService) {
-           //TODO: Refactor latest controller
 
             $scope.location = {
                 latitude: 0,
@@ -42,6 +41,7 @@ angular.module('home', ['ngCordova','utils.parse'])
                     var text = 'zbra';
                     parseService.postLeg(text,imageData, $scope.location);
                 //    sendImage(imageData);
+
                 }, function(err) {
                     // An error occured. Show a message to the user
 
@@ -52,16 +52,32 @@ angular.module('home', ['ngCordova','utils.parse'])
                 });
             };
 
-            $cordovaGeolocation.getCurrentPosition()
-                .then(function (position) {
-                    $scope.location.latitude  = position.coords.latitude;
-                    $scope.location.longitude = position.coords.longitude;
+        $cordovaGeolocation.getCurrentPosition()
+            .then(function (position) {
 
-                    $scope.isGeolocated = true;
-                }, function(err) {
-                    // error
+                //TODO: Configure accuracy, timeout ...
+                $scope.location.latitude  = position.coords.latitude;
+                $scope.location.longitude = position.coords.longitude;
+
+                $scope.isGeolocated = true;
+            }, function(err) {
+                // error
+            });
+
+        $scope.hideBackButton = true;
+
+        $scope.getLatestPost = function() {
+         var parse =   parseService.getLatestLegs()
+                .done(function(legs){
+
+                    console.log('success',legs);
+                    $scope.latest = legs;
+
+                })
+                .fail(function(error){
+                    console.log('fail',error);
                 });
+        }
 
-            $scope.hideBackButton = true;
-            $scope.latest = parseService.getLatestLegs();
+        $scope.getLatestPost();
     });

@@ -7,6 +7,8 @@ angular.module('login', ['utils.parse'])
         $ionicSideMenuDelegate.canDragContent(false);
         $scope.hideBackButton = true;
         // Form data for the login modal
+
+        //TODO: delete hard coded login/passwords
         $scope.loginData = {
             username: 'num3a',
             password: 'tobeskin'

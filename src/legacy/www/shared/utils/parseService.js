@@ -8,7 +8,10 @@
 angular.module('utils.parse', [])
 
     .factory('parseService', function($ionicLoading,$state,$ionicPopup) {
-        //TODO: Initialize parse
+
+        Parse.initialize('AeZx3H0Al4rbVh5OoMDy48K1I1Lq0dYM1PdgHJgA','gwk1pkiaMStmHZsEWzIkxKtlmw1lTFjNLqt2Nj2O');
+
+        //TODO : return Parse.Promise to avoid ionic manipulations (popup, state, loading ...)
         var factory = {};
 
         function logIn(username, password) {
@@ -64,49 +67,45 @@ angular.module('utils.parse', [])
 
         factory.signUp = function(username, password, email){
 
-                var user = new Parse.User();
-                user.set("username", username);
-                user.set("password", password);
-                user.set("email", email);
+            var user = new Parse.User();
+            user.set("username", username);
+            user.set("password", password);
+            user.set("email", email);
 
-                user.signUp(null, {
-                    success: function(user) {
-                        $ionicLoading.hide();
+            user.signUp(null, {
+                success: function(user) {
+                    $ionicLoading.hide();
 
-                        logIn(username,password);
-                    },
-                    error: function(user, error) {
-                        // Show the error message somewhere and let the user try again.
-                        $ionicLoading.hide();
+                    logIn(username,password);
+                },
+                error: function(user, error) {
+                    // Show the error message somewhere and let the user try again.
+                    $ionicLoading.hide();
 
-                        var errorMessage = '';
-                        switch(error.code)
-                        {
-                            case -1:
-                                errorMessage = "Please fill all fields."
-                                break;
-                            case 202:
-                                errorMessage= "User " + username + " already exist."
-                                break;
-                            case 203:
-                                errorMessage= "Email " + email + " already exist."
-                                break;
+                    var errorMessage = '';
+                    switch(error.code)
+                    {
+                        case -1:
+                            errorMessage = "Please fill all fields."
+                            break;
+                        case 202:
+                            errorMessage= "User " + username + " already exist."
+                            break;
+                        case 203:
+                            errorMessage= "Email " + email + " already exist."
+                            break;
 
-                            default :
-                                errorMessage = "Error: " + error.code + " " + error.message;
-                                break;
-                        }
-
-                        $ionicPopup.alert({
-                            title: 'Ooops !',
-                            template: errorMessage
-                        });
+                        default :
+                            errorMessage = "Error: " + error.code + " " + error.message;
+                            break;
                     }
-                });
 
-        };
-
-        factory.saveFile = function(fileName, data, type){
+                    $ionicPopup.alert({
+                        title: 'Ooops !',
+                        template: errorMessage
+                    });
+                }
+            });
 
         };
 
@@ -135,14 +134,14 @@ angular.module('utils.parse', [])
         };
 
         factory.getLatestLegs = function(){
-          //  var Leg = Parse.Object('Leg');
 
             var query = new Parse.Query('Leg');
 
             //TODO: tune query for retrieving near legs
-           // query.equalTo("playerName", "Dan Stemkoski");
-            query.find({
-                success: function(results) {
+            query.descending('createdAt');
+
+        return    query.find(null)
+                .done(function(results) {
                     console.log("Successfully retrieved " + results.length + " legs.", results);
 
                     var returnValue = [];
@@ -165,13 +164,13 @@ angular.module('utils.parse', [])
                         });
                     }
 
-                    return returnValue;
-                },
-                error: function(error) {
+                  return  returnValue;
+                })
+                .fail(function(error) {
                     console.log("Error: " + error.code + " " + error.message);
                     return null;
-                }
-            });
+                });
         };
+
         return factory;
     });

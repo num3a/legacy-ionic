@@ -18,7 +18,7 @@ angular.module('legacyApp', ['ionic', 'introduction','home','sideMenu','registra
           StatusBar.styleDefault();
         }
 
-        Parse.initialize('AeZx3H0Al4rbVh5OoMDy48K1I1Lq0dYM1PdgHJgA','gwk1pkiaMStmHZsEWzIkxKtlmw1lTFjNLqt2Nj2O');
+//        Parse.initialize('AeZx3H0Al4rbVh5OoMDy48K1I1Lq0dYM1PdgHJgA','gwk1pkiaMStmHZsEWzIkxKtlmw1lTFjNLqt2Nj2O');
 
       });
     })

@@ -8,7 +8,7 @@
 
             <div class="item item-avatar">
                 <img ng-src="{{item.avatar}}">
-                <h2>Pretty Hate Machine</h2>
+                <h2>{{item.text}}</h2>
                 <p>Nine Inch Nails</p>
             </div>
 
@@ -27,6 +27,8 @@
     <ion-footer-bar align-title="left" class="bar-calm">
         <div class="buttons">
             <button class="button" ng-show="isGeolocated" ng-click="takePhoto()">Take a picture</button>
+            <button class="button" ng-click="getLatestPost()">Update</button>
+
         </div>
 
     </ion-footer-bar>
