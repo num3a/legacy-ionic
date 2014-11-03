@@ -4,7 +4,7 @@
 /**
  * Created by emmanuelernest on 20/10/14.
  */
-
+//TODO: Split into accountService (login, register, edit profile ...) and dataService (post and retrieve legs)
 angular.module('utils.parse', [])
 
     .factory('parseService', function() {
