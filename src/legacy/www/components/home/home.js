@@ -50,6 +50,7 @@ angular.module('home', ['ngCordova','utils.parse'])
                 template: 'Acquiring your position...'
             });
 
+
             $cordovaGeolocation.getCurrentPosition()
                 .then(function (position) {
 
