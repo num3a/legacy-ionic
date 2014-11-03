@@ -13,6 +13,7 @@ angular.module('home', ['ngCordova','utils.parse'])
             $ionicViewService.clearHistory();
 
             $scope.takePhoto = function() {
+
                 var options = {
                     quality : 100,
                     destinationType : Camera.DestinationType.DATA_URL,
@@ -25,22 +26,12 @@ angular.module('home', ['ngCordova','utils.parse'])
                     saveToPhotoAlbum: false
                 };
 
-                //TODO: add login everywhere in the application
+                //TODO: add logs everywhere in the application
                 $cordovaCamera.getPicture(options).then(function(imageData) {
-                    // Success! Image data is here
-
-                    /*  String.prototype.getBytes = function () {
-                     var bytes = [];
-                     for (var i = 0; i < this.length; ++i) {
-                     bytes.push(this.charCodeAt(i));
-                     }
-                     return bytes;
-                     };*/
-
-                    // var bytesData = imageData.getBytes();
+                    //TODO: delete zbra text
                     var text = 'zbra';
-                    parseService.postLeg(text,imageData, $scope.location);
-                //    sendImage(imageData);
+                    parseService.postLeg(text,imageData, $scope.location)
+                        .done();
 
                 }, function(err) {
                     // An error occured. Show a message to the user
@@ -52,22 +43,35 @@ angular.module('home', ['ngCordova','utils.parse'])
                 });
             };
 
-        $cordovaGeolocation.getCurrentPosition()
-            .then(function (position) {
 
-                //TODO: Configure accuracy, timeout ...
-                $scope.location.latitude  = position.coords.latitude;
-                $scope.location.longitude = position.coords.longitude;
+        function initialization(){
 
-                $scope.isGeolocated = true;
-            }, function(err) {
-                // error
+            $ionicLoading.show({
+                template: 'Acquiring your position...'
             });
+
+            $cordovaGeolocation.getCurrentPosition()
+                .then(function (position) {
+
+                    //TODO: Configure accuracy, timeout ...
+                    $scope.location.latitude  = position.coords.latitude;
+                    $scope.location.longitude = position.coords.longitude;
+
+                    $scope.isGeolocated = true;
+                    $scope.getLatestPost($scope.location, 7);
+
+                    $ionicLoading.hide();
+
+                }, function(err) {
+                    // error
+                });
+        }
+
 
         $scope.hideBackButton = true;
 
         $scope.getLatestPost = function() {
-         var parse =   parseService.getLatestLegs()
+            parseService.getLatestLegs($scope.location, 7)
                 .done(function(legs){
 
                     console.log('success',legs);
@@ -79,5 +83,5 @@ angular.module('home', ['ngCordova','utils.parse'])
                 });
         }
 
-        $scope.getLatestPost();
+        initialization();
     });

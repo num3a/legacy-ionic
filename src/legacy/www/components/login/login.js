@@ -24,8 +24,40 @@ angular.module('login', ['utils.parse'])
             var username = $scope.loginData.username;
             var password = $scope.loginData.password;
 
-            parseService.logIn(username,password);
+            $ionicLoading.show({
+                template: 'Logging in...'
+            });
+
+            parseService.logIn(username,password)
+                .done(function(user){
+                    $ionicLoading.hide();
+                    $state.transitionTo('app.home');
+
+                })
+                .fail(function(user, error){
+                    var errorMessage = '';
+                    switch (error.code) {
+                        case 100:
+                            errorMessage = 'Legacy is unreachable. <br />Please check your network settings!';
+                            break;
+
+                        case 101:
+                            errorMessage = 'Wrong login/password. <br />Please check your credentials!';
+                            break;
+                        default :
+                            errorMessage = error.message;
+                            break;
+                    }
+
+                    $ionicLoading.hide();
+
+                    $ionicPopup.alert({
+                        title: 'Ooops !',
+                        template: errorMessage
+                    });
+                });
         };
+
         /*
         $scope.forgotPassword = function () {
               Parse.User.requestPasswordReset("email@example.com", {

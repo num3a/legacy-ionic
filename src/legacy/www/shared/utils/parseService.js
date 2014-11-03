@@ -7,54 +7,25 @@
 
 angular.module('utils.parse', [])
 
-    .factory('parseService', function($ionicLoading,$state,$ionicPopup) {
+    .factory('parseService', function() {
 
         Parse.initialize('AeZx3H0Al4rbVh5OoMDy48K1I1Lq0dYM1PdgHJgA','gwk1pkiaMStmHZsEWzIkxKtlmw1lTFjNLqt2Nj2O');
 
-        //TODO : return Parse.Promise to avoid ionic manipulations (popup, state, loading ...)
         var factory = {};
 
         function logIn(username, password) {
-            console.log('Doing login', {username: username});
 
-            $ionicLoading.show({
-                template: 'Logging in...'
-            });
-            Parse.User.logIn(username, password, {
-                success: function (user) {
-
-                    $ionicLoading.hide();
-                    $state.transitionTo('app.home');
-                },
-                error: function (user, error) {
-                    // The login failed. Check error to see why.
-
-                    var errorMessage = '';
-                    switch (error.code) {
-                        case 100:
-                            errorMessage = 'Legacy is unreachable. <br />Please check your network settings!';
-                            break;
-
-                        case 101:
-                            errorMessage = 'Wrong login/password. <br />Please check your credentials!';
-                            break;
-                        default :
-                            errorMessage = error.message;
-                            break;
-                    }
-
-                    $ionicLoading.hide();
-
-                    $ionicPopup.alert({
-                        title: 'Ooops !',
-                        template: errorMessage
-                    });
-                }
-            });
+         return Parse.User.logIn(username, password)
+                .done(function(user){
+                    console.log('ParseService: Login successful.', user);
+                })
+                .fail(function(user,error){
+                    console.log('ParseService: Log in failed', user, error);
+                });
         }
 
         factory.logIn = function(username,password){
-            logIn(username, password);
+            return logIn(username, password);
         };
 
         factory.logOut = function(){
@@ -72,75 +43,58 @@ angular.module('utils.parse', [])
             user.set("password", password);
             user.set("email", email);
 
-            user.signUp(null, {
-                success: function(user) {
-                    $ionicLoading.hide();
+           return user.signUp(null)
+                .done(function(user){
+                    console.log('ParseService: sign up with success.', user);
 
-                    logIn(username,password);
-                },
-                error: function(user, error) {
-                    // Show the error message somewhere and let the user try again.
-                    $ionicLoading.hide();
-
-                    var errorMessage = '';
-                    switch(error.code)
-                    {
-                        case -1:
-                            errorMessage = "Please fill all fields."
-                            break;
-                        case 202:
-                            errorMessage= "User " + username + " already exist."
-                            break;
-                        case 203:
-                            errorMessage= "Email " + email + " already exist."
-                            break;
-
-                        default :
-                            errorMessage = "Error: " + error.code + " " + error.message;
-                            break;
-                    }
-
-                    $ionicPopup.alert({
-                        title: 'Ooops !',
-                        template: errorMessage
-                    });
-                }
-            });
-
+                })
+                .fail(function(user, error){
+                    console.log('ParseService: failed to sign up with: ', user, error);
+                });
         };
 
         factory.postLeg = function(text, imageData, location){
-            //TODO: WIP send Leg
 
             var leg = new Parse.Object('Leg');
 
             var point = new Parse.GeoPoint({latitude: location.latitude, longitude: location.longitude});
 
-            //var leg = new Leg();
+            var currentUser = Parse.User.current();
 
             leg.set("location", point);
-            leg.set("Text", text);
+            leg.set("text", text);
+            leg.set('owner',currentUser);
 
             if(imageData != null){
                 var file = new Parse.File("image.png",{base64: imageData} );
                 leg.set("Image", file);
             }
 
-            leg.save().then(function(model,error){
-                console.log('leg posted', model);
-            },function(model,error){
-                console.log('an error occured:',error);
-            });
+           return leg.save()
+               .done(function(model){
+                   console.log('ParseService: Leg posted', model);
+               })
+               .fail(function(model,error){
+                   console.log('ParseService: an error occured:', error);
+
+               });
         };
 
-        factory.getLatestLegs = function(){
+        factory.getLatestLegs = function(location, kmDistance){
+
+            if(kmDistance == null)
+            {
+                kmDistance = 5;
+            }
 
             var query = new Parse.Query('Leg');
+            var geoPosition = new Parse.GeoPoint(location.latitude,location.longitude);
 
-            //TODO: tune query for retrieving near legs
             query.descending('createdAt');
+            query.withinKilometers('location',geoPosition,kmDistance);
+            query.limit(30);
 
-        return    query.find(null)
+            return    query.find(null)
                 .done(function(results) {
                     console.log("Successfully retrieved " + results.length + " legs.", results);
 
@@ -153,7 +107,8 @@ angular.module('utils.parse', [])
                         var text = object.get('Text');
                         var image = object.get('Image');
 
-                        returnValue.push({
+                        var leg =
+                        {
                             avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg",
                             text: text,
                             image: image.url(),
@@ -161,13 +116,16 @@ angular.module('utils.parse', [])
                                 longitude: geoPoint.longitude,
                                 latitude: geoPoint.latitude
                             }
-                        });
+                        };
+                        returnValue.push(leg);
+
+                      //  console.log('ParseService: Add object to returnValue',leg);
                     }
 
-                  return  returnValue;
+                    return  returnValue;
                 })
                 .fail(function(error) {
-                    console.log("Error: " + error.code + " " + error.message);
+                    console.log("ParseService: Error: " + error.code + " " + error.message);
                     return null;
                 });
         };
