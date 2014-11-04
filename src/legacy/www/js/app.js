@@ -4,7 +4,16 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('legacyApp', ['ionic', 'introduction','home','sideMenu','registration','login','utils.parse'])
+angular.module('legacyApp', [
+    'ionic',
+    'introduction',
+    'home',
+    'sideMenu',
+    'registration',
+    'login',
+    'utils.parse',
+    'map',
+    'map.directives'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -59,15 +68,15 @@ angular.module('legacyApp', ['ionic', 'introduction','home','sideMenu','registra
               }
             }
           })
-        /*  .state('app.single', {
-            url: "/playlists/:playlistId",
+         .state('app.map', {
+            url: "/map",
             views: {
               'menuContent' :{
-                templateUrl: "templates/playlist.html",
-                controller: 'PlaylistCtrl'
+                templateUrl: "components/map/map.html",
+                controller: 'MapCtrl'
               }
             }
-          })*/
+          })
 
           .state('app.introduction',{
             url: "/intro",

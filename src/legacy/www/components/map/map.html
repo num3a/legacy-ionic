@@ -1,0 +1,13 @@
+<ion-view title="Map" hide-back-button="{{false}}">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <map on-create="mapCreated(map)"></map>
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-calm">
+        <div class="buttons">
+            <button class="button" ng-click="centerOnMe()">Update</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

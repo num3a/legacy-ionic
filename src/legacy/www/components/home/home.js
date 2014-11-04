@@ -8,6 +8,7 @@ angular.module('home', ['ngCordova','utils.parse'])
                 latitude: 0,
                 longitude : 0
             };
+            $scope.latest = [];
 
             $scope.isGeolocated = false;
             $ionicViewService.clearHistory();
