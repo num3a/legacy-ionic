@@ -19,24 +19,36 @@ angular.module('map', ['utils.parse'])
                     console.log('success',legs);
                     $scope.latest = legs;
 
-                    loadMarker();
+                    loadMarker(legs);
                 })
                 .fail(function(error){
                     console.log('fail',error);
                 });
         }
 
-        function loadMarker() {
-            for(var i = 0; i < $scope.latest.length; i++){
+        function loadMarker(legs) {
+            var length = $scope.latest.length;
 
-                var latLng = new google.maps.LatLng($scope.location.latitude,$scope.location.longitude);
+            for(var i = 0; i < length; i++){
 
+                var coordinates = new google.maps.LatLng(legs[i].location.latitude,legs[i].location.longitude);
+
+                var image = {
+                    url: legs[i].image,
+                    // This marker is 20 pixels wide by 32 pixels tall.
+                    size: new google.maps.Size(100, 100),
+                    // The origin for this image is 0,0.
+                    origin: new google.maps.Point(0,0),
+                    // The anchor for this image is the base of the flagpole at 0,32.
+                    anchor: new google.maps.Point(0, 100)
+                };
 
                 // To add the marker to the map, use the 'map' property
                 var marker = new google.maps.Marker({
-                    position: latLng,
+                    position: coordinates,
                     map:  $scope.map,
-                    title:"Here"
+                    title:"Here",
+                    icon: image
                 });
             }
         }
