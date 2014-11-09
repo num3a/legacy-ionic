@@ -1,6 +1,7 @@
 angular.module('map', ['utils.parse'])
     //TODO: Refactor map controller
     .controller('MapCtrl', function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
+
         $scope.location = {
             latitude: 0,
             longitude : 0
@@ -26,35 +27,10 @@ angular.module('map', ['utils.parse'])
                 });
         }
 
-        function loadMarker(legs) {
-            var length = $scope.latest.length;
-
-            for(var i = 0; i < length; i++){
-
-                var coordinates = new google.maps.LatLng(legs[i].location.latitude,legs[i].location.longitude);
-
-                var image = {
-                    url: legs[i].image,
-                    // This marker is 20 pixels wide by 32 pixels tall.
-                    size: new google.maps.Size(100, 100),
-                    // The origin for this image is 0,0.
-                    origin: new google.maps.Point(0,0),
-                    // The anchor for this image is the base of the flagpole at 0,32.
-                    anchor: new google.maps.Point(0, 100)
-                };
-
-                // To add the marker to the map, use the 'map' property
-                var marker = new google.maps.Marker({
-                    position: coordinates,
-                    map:  $scope.map,
-                    title:"Here",
-                    icon: image
-                });
-            }
-        }
-
         $scope.centerOnMe = function () {
+
             console.log("Centering");
+
             if (!$scope.map) {
                 return;
             }
@@ -83,4 +59,31 @@ angular.module('map', ['utils.parse'])
                     $ionicLoading.hide();
                 });
         };
+
+        function loadMarker(legs) {
+            var length = $scope.latest.length;
+
+            for(var i = 0; i < length; i++){
+
+                var coordinates = new google.maps.LatLng(legs[i].location.latitude,legs[i].location.longitude);
+
+                var image = {
+                    url: legs[i].image,
+                    // This marker is 20 pixels wide by 32 pixels tall.
+                    size: new google.maps.Size(100, 100),
+                    // The origin for this image is 0,0.
+                    origin: new google.maps.Point(0,0),
+                    // The anchor for this image is the base of the flagpole at 0,32.
+                    anchor: new google.maps.Point(0, 100)
+                };
+
+                // To add the marker to the map, use the 'map' property
+                var marker = new google.maps.Marker({
+                    position: coordinates,
+                    map:  $scope.map,
+                    title:"Here",
+                    icon: image
+                });
+            }
+        }
     });

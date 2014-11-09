@@ -2,7 +2,6 @@
  * Created by emmanuelernest on 04/11/14.
  */
 angular.module('map.directives', [])
-
     .directive('map', function() {
         return {
             restrict: 'E',
