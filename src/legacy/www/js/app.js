@@ -13,6 +13,7 @@ angular.module('legacyApp', [
     'login',
     'utils.parse',
     'map',
+    'augmented',
     'map.directives'])
 
     .run(function($ionicPlatform) {
@@ -77,7 +78,15 @@ angular.module('legacyApp', [
               }
             }
           })
-
+          .state('app.augmented', {
+              url: "/augmented",
+              views: {
+                  'menuContent' :{
+                      templateUrl: "components/arView/augmented.html",
+                      controller: 'AugmentedCtrl'
+                  }
+              }
+          })
           .state('app.introduction',{
             url: "/intro",
             views: {

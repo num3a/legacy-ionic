@@ -1,5 +1,6 @@
 angular.module('map', ['utils.parse'])
     //TODO: Refactor map controller
+    //TODO: user http://tombatossals.github.io/angular-leaflet-directive
     .controller('MapCtrl', function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
 
         $scope.location = {

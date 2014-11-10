@@ -29,8 +29,7 @@ angular.module('home', ['ngCordova','utils.parse'])
 
                 //TODO: add logs everywhere in the application
                 $cordovaCamera.getPicture(options).then(function(imageData) {
-                    //TODO: delete zbra text
-                    var text = 'zbra';
+                    var text = '';
                     parseService.postLeg(text,imageData, $scope.location)
                         .done();
 
