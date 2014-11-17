@@ -8,4 +8,4 @@ angular.module('sideMenu', ['utils.parse'])
 
             $state.transitionTo('app.login');
         };
-    });
+    });;

@@ -14,7 +14,7 @@ angular.module('legacyApp', [
     'utils.parse',
     'map',
     'augmented',
-    'map.directives'])
+    'leaflet-directive'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {

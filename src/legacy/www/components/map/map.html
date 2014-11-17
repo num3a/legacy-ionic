@@ -3,7 +3,8 @@
         <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-content class="has-header">
-        <map on-create="mapCreated(map)"></map>
+       <!--  <map on-create="mapCreated(map)"></map> -->
+        <leaflet defaults="defaults" center="center" height="100%" width="100%"></leaflet>
     </ion-content>
     <ion-footer-bar align-title="left" class="bar-calm">
         <div class="buttons">

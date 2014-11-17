@@ -1,7 +1,29 @@
 angular.module('map', ['utils.parse'])
     //TODO: Refactor map controller
     //TODO: user http://tombatossals.github.io/angular-leaflet-directive
-    .controller('MapCtrl', function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
+    .controller('MapCtrl', ['$scope','leafletData', '$ionicLoading', '$cordovaGeolocation',function($scope,leafletData, $ionicLoading, $cordovaGeolocation, parseService) {
+        leafletData.getMap().then(function(map) {
+            //L.GeoIP.centerMapOnPosition(map, 2);
+            $scope.map = map;
+        });
+        angular.extend($scope, {
+            center: {
+                lat: 51.505,
+                lng: -0.09,
+                zoom: 8
+            }
+        });
+        angular.extend($scope, {
+            defaults: {
+                tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
+                maxZoom: 14,
+                path: {
+                    weight: 10,
+                    color: '#800000',
+                    opacity: 1
+                }
+            }
+        });
 
         $scope.location = {
             latitude: 0,
@@ -11,7 +33,7 @@ angular.module('map', ['utils.parse'])
         $scope.latest = [];
 
         $scope.mapCreated = function(map) {
-            $scope.map = map;
+            //$scope.map = map;
         };
 
         $scope.getLatestPost = function() {
@@ -49,11 +71,13 @@ angular.module('map', ['utils.parse'])
                     $scope.location.longitude = position.coords.longitude;
 
                     $scope.isGeolocated = true;
-                    $scope.getLatestPost($scope.location, 7);
+                   // $scope.getLatestPost($scope.location, 7);
 
-                    $scope.map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+                    $scope.center.lat = position.coords.latitude;
+                    $scope.center.lng = position.coords.longitude;
+                    $scope.center.zoom = 15;
 
-                    $scope.getLatestPost();
+                   // $scope.getLatestPost();
                     $ionicLoading.hide();
                 }, function(error) {
                     console.log('Unable to get location: ', error.message);
@@ -87,4 +111,4 @@ angular.module('map', ['utils.parse'])
                 });
             }
         }
-    });
+    }]);

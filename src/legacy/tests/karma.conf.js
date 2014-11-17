@@ -55,6 +55,7 @@ module.exports = function(config) {
             {pattern: 'angular/angular-resource.js', included: true},
 
             {pattern: '../www/lib/parse/parse.js', included: true},
+            {pattern: '../www/lib/leaflet/angular-leaflet-directive.js', included: true},
 
             {pattern: '../www/lib/ngCordova/dist/ng-cordova.js', included: true},
             {pattern: '../www/lib/ngCordova/dist/ng-cordova-mocks.js', included: true}
