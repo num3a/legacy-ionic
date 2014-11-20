@@ -1,36 +1,25 @@
 angular.module('map', ['utils.parse'])
     //TODO: Refactor map controller
     //TODO: user http://tombatossals.github.io/angular-leaflet-directive
-    .controller('MapCtrl', ['$scope','leafletData', '$ionicLoading', '$cordovaGeolocation',function($scope,leafletData, $ionicLoading, $cordovaGeolocation, parseService) {
-        leafletData.getMap().then(function(map) {
-            //L.GeoIP.centerMapOnPosition(map, 2);
-            $scope.map = map;
-        });
-        angular.extend($scope, {
-            center: {
-                lat: 51.505,
-                lng: -0.09,
-                zoom: 8
-            }
-        });
-        angular.extend($scope, {
-            defaults: {
-                tileLayer: "http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png",
-                maxZoom: 14,
-                path: {
-                    weight: 10,
-                    color: '#800000',
-                    opacity: 1
-                }
-            }
-        });
+    .controller('MapCtrl', ['$scope', '$ionicLoading', '$cordovaGeolocation',function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
+        // Provide your access token
+        L.mapbox.accessToken = 'pk.eyJ1IjoibnVtM2EiLCJhIjoiUXJsQkxPOCJ9.E6vvpp0XcGvKP2f3qmx8Lg';
 
         $scope.location = {
-            latitude: 0,
-            longitude : 0
+            latitude: 47.603569,
+            longitude : 122.329453
+        };
+        $scope.zoomLevel = 10;
+
+        $scope.mapMovedCallback = function(bounds) {
+            console.log('You repositioned the map to:');
+            console.log(bounds);
         };
 
-        $scope.latest = [];
+        $scope.mapZoomedCallback = function(bounds) {
+            console.log('You zoomed the map to:');
+            console.log(bounds);
+        };        $scope.latest = [];
 
         $scope.mapCreated = function(map) {
             //$scope.map = map;
@@ -53,11 +42,7 @@ angular.module('map', ['utils.parse'])
         $scope.centerOnMe = function () {
 
             console.log("Centering");
-
-            if (!$scope.map) {
-                return;
-            }
-
+            $scope.reposition = true;
             $ionicLoading.show({
                 content: 'Getting current location...',
                 showBackdrop: false
@@ -72,10 +57,6 @@ angular.module('map', ['utils.parse'])
 
                     $scope.isGeolocated = true;
                    // $scope.getLatestPost($scope.location, 7);
-
-                    $scope.center.lat = position.coords.latitude;
-                    $scope.center.lng = position.coords.longitude;
-                    $scope.center.zoom = 15;
 
                    // $scope.getLatestPost();
                     $ionicLoading.hide();

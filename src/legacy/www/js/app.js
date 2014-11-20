@@ -14,7 +14,7 @@ angular.module('legacyApp', [
     'utils.parse',
     'map',
     'augmented',
-    'leaflet-directive'])
+    'angularMapbox'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
