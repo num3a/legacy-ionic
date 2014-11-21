@@ -38,13 +38,24 @@ angular.module('angularMapbox').directive('mapbox', function($compile, $q) {
 
       var mapWidth = attrs.width || 500;
       var mapHeight = attrs.height || 500;
-      element.css('width', mapWidth + 'px');
-      element.css('height', mapHeight + 'px');
+      element.css('width', '100%');
+    //  element.css('width', mapWidth + 'px');
+      element.css('height', '100%');
+      //element.css('height', mapHeight + 'px');
 
-      var zoom = attrs.zoom || 12;
+
+      var zoom = attrs.zoom || 20;
       if(attrs.lat && attrs.lng) {
         scope.map.setView([attrs.lat, attrs.lng], zoom);
       }
+
+      attrs.$observe('lat',function(value){
+        if(value)
+        {
+          console.log('latitude has change');
+          scope.map.setView([attrs.lat, attrs.lng], zoom);
+        }
+      });
 
       scope.isClusteringMarkers = attrs.clusterMarkers !== undefined;
 
@@ -158,7 +169,7 @@ angular.module('angularMapbox').directive('marker', function($compile) {
         if(opts.draggable) marker.dragging.enable();
 
         controller.$scope.markers.push(marker);
-        controller.$scope.fitMapToMarkers();
+      //  controller.$scope.fitMapToMarkers();
 
         return marker;
       };

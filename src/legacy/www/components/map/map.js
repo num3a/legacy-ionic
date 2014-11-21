@@ -1,15 +1,15 @@
 angular.module('map', ['utils.parse'])
     //TODO: Refactor map controller
     //TODO: user http://tombatossals.github.io/angular-leaflet-directive
-    .controller('MapCtrl', ['$scope', '$ionicLoading', '$cordovaGeolocation',function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
+    .controller('MapCtrl', ['$scope', '$ionicLoading', '$cordovaGeolocation', 'parseService',function($scope, $ionicLoading, $cordovaGeolocation, parseService) {
         // Provide your access token
         L.mapbox.accessToken = 'pk.eyJ1IjoibnVtM2EiLCJhIjoiUXJsQkxPOCJ9.E6vvpp0XcGvKP2f3qmx8Lg';
 
         $scope.location = {
-            latitude: 47.603569,
-            longitude : 122.329453
+            latitude: 48.9637363,
+            longitude : 2.2603136
         };
-        $scope.zoomLevel = 10;
+        $scope.zoomLevel = 15;
 
         $scope.mapMovedCallback = function(bounds) {
             console.log('You repositioned the map to:');
@@ -19,20 +19,22 @@ angular.module('map', ['utils.parse'])
         $scope.mapZoomedCallback = function(bounds) {
             console.log('You zoomed the map to:');
             console.log(bounds);
-        };        $scope.latest = [];
+        };
+
+        $scope.latest = [];
 
         $scope.mapCreated = function(map) {
             //$scope.map = map;
         };
 
-        $scope.getLatestPost = function() {
+        function getLatestPost() {
             parseService.getLatestLegs($scope.location, 7)
                 .done(function(legs){
 
                     console.log('success',legs);
                     $scope.latest = legs;
 
-                    loadMarker(legs);
+                    //loadMarker(legs);
                 })
                 .fail(function(error){
                     console.log('fail',error);
@@ -57,8 +59,7 @@ angular.module('map', ['utils.parse'])
 
                     $scope.isGeolocated = true;
                    // $scope.getLatestPost($scope.location, 7);
-
-                   // $scope.getLatestPost();
+                    getLatestPost();
                     $ionicLoading.hide();
                 }, function(error) {
                     console.log('Unable to get location: ', error.message);

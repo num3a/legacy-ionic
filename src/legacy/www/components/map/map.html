@@ -4,15 +4,26 @@
     </ion-nav-buttons>
     <ion-content class="has-header">
        <!--  <map on-create="mapCreated(map)"></map> -->
-        <mapbox map-id="num3a.k9bndgb6" lat="{{location.latitude}}" lng="{{location.longitude}}" zoom="{{zoomLevel}}" on-reposition="mapMovedCallback"   on-zoom="mapZoomedCallback">
-            <marker lat="47.639570" lng="-122.399660"><h1>This is an unstyled marker</h1></marker>
+        <mapbox map-id="num3a.k9bndgb6" lat="{{location.latitude}}" lng="{{location.longitude}}" zoom="{{zoomLevel}}"
+                on-reposition="mapMovedCallback" on-zoom="mapZoomedCallback" >
+
+            <div ng-repeat="item in latest">
+                <marker lat="{{item.location.latitude}}" lng="{{item.location.longitude}}" color="#39cccc" symbol="grocery">
+                    <h1>{{item.text}}</h1>
+                    <!--<p>{{market.times}}</p> -->
+                </marker>
+            </div>
+
+            <!--<marker lat="47.639570" lng="-122.399660"><h1>This is an unstyled marker</h1></marker>
 
             <marker lat="47.615244" lng="-122.320800" size="large" color="#39cccc" symbol="grocery">
                 <h1>Capitol Hill Farmer's Market</h1>
                 <p>Time: Sundays, 11am-3pm, year round</p>
             </marker>
-
-            <marker current-location ></marker>
+                -->
+            <marker current-location >
+                <h1>I'm here !</h1>
+            </marker>
         </mapbox>    </ion-content>
     <ion-footer-bar align-title="left" class="bar-calm">
         <div class="buttons">
