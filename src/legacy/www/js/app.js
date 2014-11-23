@@ -14,7 +14,8 @@ angular.module('legacyApp', [
     'utils.parse',
     'map',
     'augmented',
-    'angularMapbox'])
+    'angularMapbox',
+    'post'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
@@ -84,6 +85,15 @@ angular.module('legacyApp', [
                   'menuContent' :{
                       templateUrl: "components/arView/augmented.html",
                       controller: 'AugmentedCtrl'
+                  }
+              }
+          })
+          .state('app.post', {
+              url: "/post",
+              views: {
+                  'menuContent' :{
+                      templateUrl: "components/post/post.html",
+                      controller: 'PostCtrl'
                   }
               }
           })

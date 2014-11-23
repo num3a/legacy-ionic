@@ -15,7 +15,8 @@ angular.module('home', ['ngCordova','utils.parse'])
 
             $scope.takePhoto = function() {
 
-                var options = {
+                $state.go('app.post');
+            /*    var options = {
                     quality : 100,
                     destinationType : Camera.DestinationType.DATA_URL,
                     sourceType : Camera.PictureSourceType.CAMERA,
@@ -40,7 +41,7 @@ angular.module('home', ['ngCordova','utils.parse'])
                         title: 'Ooops !',
                         template: err.message
                     });
-                });
+                }); */
             };
 
 
@@ -59,7 +60,7 @@ angular.module('home', ['ngCordova','utils.parse'])
                     $scope.location.longitude = position.coords.longitude;
 
                     $scope.isGeolocated = true;
-                    $scope.getLatestPost($scope.location, 7);
+                    $scope.getLatestPost();
 
                     $ionicLoading.hide();
 

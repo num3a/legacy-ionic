@@ -1,0 +1,39 @@
+<ion-view title="Post leg">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+        <form ng-submit="doRegistration()">
+
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Share:
+                    </div>
+                    <select ng-model="selectedType" ng-init="selectedType = selectedType || legTypes[0]"
+                            ng-options="item as item.name for item in legTypes" >
+                    </select>
+                </label>
+
+                <label class="item item-input">
+                    <span class="input-label">Email</span>
+                    <input type="email" ng-model="registrationData.email" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="registrationData.username" required>
+                </label>
+                <label class="item item-input">
+                    <textarea placeholder="Comments"></textarea>
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Post</button>
+                </label>
+            </div>
+        </form>
+
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-calm">
+    </ion-footer-bar>
+</ion-view>
