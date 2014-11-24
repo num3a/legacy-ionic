@@ -13,8 +13,7 @@ angular.module('legacyApp', [
     'login',
     'utils.parse',
     'map',
-    'angularMapbox',
-    'utils.user'])
+    'angularMapbox'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {

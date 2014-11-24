@@ -1,7 +1,7 @@
 /**
  * Created by emmanuelernest on 01/11/14.
  */
-angular.module('home', ['ngCordova', 'utils.parse', 'utils.user'])
+angular.module('home', ['ngCordova', 'utils.parse'])
     .controller('HomeCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup, $ionicSideMenuDelegate, $ionicViewService, $cordovaCamera, $cordovaGeolocation, parseService) {
 
         $scope.hideBackButton = true;

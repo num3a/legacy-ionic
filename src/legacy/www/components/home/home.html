@@ -13,9 +13,10 @@
 
                     {{item.username}}
                 </p>
-                <span >
+                <span ng-if="item.distance > 0">
                     {{item.distance}} km
                 </span>
+                <span ng-if="item.distance == 0">Here !</span>
             </div>
 
             <div class="item item-image">
