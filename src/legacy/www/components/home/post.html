@@ -1,0 +1,32 @@
+<div class="modal">
+    <ion-header-bar>
+        <h1 class="title">Share a thought</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closePostLeg()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="postLeg()">
+
+            <div class="list">
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Share:
+                    </div>
+                    <select ng-model="selectedType" ng-init="selectedType = selectedType || legTypes[0]"
+                            ng-options="item as item.name for item in legTypes" disabled>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <textarea placeholder="Enter your text here" ng-model="postData.text" required></textarea>
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Post</button>
+                </label>
+            </div>
+        </form>
+
+    </ion-content>
+</div>
+

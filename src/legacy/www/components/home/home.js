@@ -1,51 +1,79 @@
 /**
  * Created by emmanuelernest on 01/11/14.
  */
-angular.module('home', ['ngCordova','utils.parse'])
-    .controller('HomeCtrl', function($scope, $timeout, $state, $ionicLoading, $ionicPopup,$ionicSideMenuDelegate,$ionicViewService,$cordovaCamera, $cordovaGeolocation, parseService) {
+angular.module('home', ['ngCordova', 'utils.parse', 'utils.user'])
+    .controller('HomeCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup, $ionicSideMenuDelegate, $ionicViewService, $cordovaCamera, $cordovaGeolocation, parseService) {
 
-            $scope.location = {
-                latitude: 0,
-                longitude : 0
-            };
-            $scope.latest = [];
+        $scope.hideBackButton = true;
+        $scope.legTypes = [
+            {id: 1, name: 'Text'},
+            {id: 2, name: 'Photo'},
+            {id: 3, name: 'Link'},
+            {id: 4, name: 'Sound'}
+        ];
+        $scope.location = {
+            latitude: 0,
+            longitude: 0
+        };
+        $scope.postData = {
+            text : "",
+            selectedType : {}
+        };
+        $scope.latest = [];
+        $scope.isGeolocated = false;
 
-            $scope.isGeolocated = false;
-            $ionicViewService.clearHistory();
+        $ionicViewService.clearHistory();
 
-            $scope.takePhoto = function() {
+        $ionicModal.fromTemplateUrl('components/home/post.html', {
+            scope: $scope
+        }).then(function (modal) {
+            $scope.modal = modal;
+        });
 
-                $state.go('app.post');
-            /*    var options = {
-                    quality : 100,
-                    destinationType : Camera.DestinationType.DATA_URL,
-                    sourceType : Camera.PictureSourceType.CAMERA,
-                    allowEdit : true,
-                    encodingType: Camera.EncodingType.PNG,
-                    targetWidth: 500,
-                    targetHeight: 500,
-                    popoverOptions: CameraPopoverOptions,
-                    saveToPhotoAlbum: false
-                };
+        $scope.openPostLeg = function () {
+            $scope.modal.show();
+        };
 
-                //TODO: add logs everywhere in the application
-                $cordovaCamera.getPicture(options).then(function(imageData) {
-                    var text = '';
-                    parseService.postLeg(text,imageData, $scope.location)
-                        .done();
+        $scope.closePostLeg = function () {
+            $scope.modal.hide();
+        };
 
-                }, function(err) {
-                    // An error occured. Show a message to the user
+        $scope.postLeg = function () {
+            console.log('post a leg, call parseService...');
+            var text = $scope.postData.text;
 
-                    $ionicPopup.alert({
-                        title: 'Ooops !',
-                        template: err.message
-                    });
-                }); */
-            };
+            parseService.postLeg(text,null,$scope.location)
+                .done(function(model){
+                    console.log('posted: ', model);
+                })
+                .fail(function(){
+                    console.log('you \'ve failed this city !')
+                })
+                .always(function(){
+                    $scope.closePostLeg();
+                    getNearestLegs();
+                })
+        };
+
+        function getNearestLegs() {
+            $ionicLoading.show({
+                template: 'Acquiring your position...'
+            });
+            parseService.getLatestLegs($scope.location, 7)
+                .done(function (legs) {
+                    console.log('Legs retrieved with success !', legs);
+                    $scope.latest = legs;
+                })
+                .fail(function (error) {
+                    console.log('An error occured when retrieving legs', error);
+                })
+                .always(function(){
+                    $ionicLoading.hide();
+                });
+        }
 
 
-        function initialization(){
+        function initialization() {
 
             $ionicLoading.show({
                 template: 'Acquiring your position...'
@@ -54,36 +82,19 @@ angular.module('home', ['ngCordova','utils.parse'])
 
             $cordovaGeolocation.getCurrentPosition()
                 .then(function (position) {
-
-                    //TODO: Configure accuracy, timeout ...
-                    $scope.location.latitude  = position.coords.latitude;
+                    $scope.location.latitude = position.coords.latitude;
                     $scope.location.longitude = position.coords.longitude;
-
                     $scope.isGeolocated = true;
-                    $scope.getLatestPost();
 
+                    getNearestLegs();
                     $ionicLoading.hide();
-
-                }, function(err) {
-                    // error
+                }, function (error) {
+                    console.log('An error occured when retrieving position', error);
+                    $ionicLoading.hide();
                 });
-        }
 
-
-        $scope.hideBackButton = true;
-
-        $scope.getLatestPost = function() {
-            parseService.getLatestLegs($scope.location, 7)
-                .done(function(legs){
-
-                    console.log('success',legs);
-                    $scope.latest = legs;
-
-                })
-                .fail(function(error){
-                    console.log('fail',error);
-                });
         }
 
         initialization();
-    });
+    })
+    ;

@@ -8,12 +8,18 @@
 
             <div class="item item-avatar">
                 <img ng-src="{{item.avatar}}">
-                <h2>{{item.text}}</h2>
-                <p>Nine Inch Nails</p>
+                <h2>{{item.textDescription}}</h2>
+                <p>
+
+                    {{item.username}}
+                </p>
+                <span >
+                    {{item.distance}} km
+                </span>
             </div>
 
             <div class="item item-image">
-                <img ng-src="{{item.image}}">
+               <!-- <img src="img/placeholder/300x300.png"> -->
             </div>
         </div>
         <!--  <a class="item item-icon-left assertive" href="#">
@@ -26,9 +32,7 @@
     </ion-content>
     <ion-footer-bar align-title="left" class="bar-calm">
         <div class="buttons">
-            <button class="button" ng-click="takePhoto()">Take a picture</button>
-            <button class="button" ng-click="getLatestPost()">Update</button>
-
+            <button class="button" ng-click="openPostLeg()">Share</button>
         </div>
 
     </ion-footer-bar>

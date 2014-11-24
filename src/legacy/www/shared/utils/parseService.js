@@ -11,6 +11,26 @@ angular.module('utils.parse', [])
 
         Parse.initialize('AeZx3H0Al4rbVh5OoMDy48K1I1Lq0dYM1PdgHJgA','gwk1pkiaMStmHZsEWzIkxKtlmw1lTFjNLqt2Nj2O');
 
+        function getDistanceBetweenPoints(lat1,lon1,lat2,lon2) {
+
+            var R = 6371; // Radius of the earth in km
+            var dLat = deg2rad(lat2-lat1);  // deg2rad below
+            var dLon = deg2rad(lon2-lon1);
+            var a =
+                    Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                    Math.sin(dLon/2) * Math.sin(dLon/2)
+                ;
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            var d = R * c; // Distance in km
+
+            var result = (d == 0) ? 0 : d.toFixed(1);
+            return result;
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI/180)
+        }
         var factory = {};
 
         function logIn(username, password) {
@@ -70,31 +90,27 @@ angular.module('utils.parse', [])
                 leg.set("Image", file);
             }
 
-           return leg.save()
-               .done(function(model){
-                   console.log('ParseService: Leg posted', model);
-               })
-               .fail(function(model,error){
-                   console.log('ParseService: an error occured:', error);
+           return leg.save();
 
-               });
         };
 
-        factory.getLatestLegs = function(location, kmDistance){
+        factory.getLatestLegs = function (currentLocation, kmDistance){
 
             if(kmDistance == null)
             {
                 kmDistance = 5;
             }
 
-            var query = new Parse.Query('Leg');
-            var geoPosition = new Parse.GeoPoint(location.latitude,location.longitude);
+            var legQuery = new Parse.Query('Leg');
 
-            query.descending('createdAt');
-            query.withinKilometers('location',geoPosition,kmDistance);
-            query.limit(30);
+            var geoPosition = new Parse.GeoPoint(currentLocation.latitude,currentLocation.longitude);
 
-            return    query.find(null)
+            legQuery.include(['owner']);
+            legQuery.descending('createdAt');
+            legQuery.withinKilometers('location',geoPosition,kmDistance);
+            legQuery.limit(50);
+
+            return    legQuery.find(null)
                 .done(function(results) {
                     console.log("Successfully retrieved " + results.length + " legs.", results);
 
@@ -103,23 +119,34 @@ angular.module('utils.parse', [])
                     for (var i = 0; i < results.length; i++) {
                         var object = results[i];
 
-                        var geoPoint = object.get('location').toJSON();
-                        var text = object.get('Text');
-                        var image = object.get('Image');
+                        var legPosition = object.get('location').toJSON();
+                        var text = object.get('text');
+                        var image = object.get('image');
+                        var owner = object.get('owner').toJSON();
+
+                        var imageUrl = "";
+                        if(image != null){
+                            imageUrl = image.url();
+                        }
+
+                        var username = owner.username;
+                        var distanceInKm = getDistanceBetweenPoints(
+                            currentLocation.latitude,currentLocation.longitude,
+                            legPosition.latitude,legPosition.longitude);
 
                         var leg =
                         {
                             avatar : "http://marvelll.fr/wp-content/uploads/2014/04/Photo-dAvatar-2.jpg",
-                            text: text,
-                            image: image.url(),
+                            textDescription: text,
+                            image: imageUrl,
                             location: {
-                                longitude: geoPoint.longitude,
-                                latitude: geoPoint.latitude
-                            }
+                                longitude: legPosition.longitude,
+                                latitude: legPosition.latitude
+                            },
+                            username:username,
+                            distance: distanceInKm
                         };
                         returnValue.push(leg);
-
-                      //  console.log('ParseService: Add object to returnValue',leg);
                     }
 
                     return  returnValue;
