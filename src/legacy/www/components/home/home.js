@@ -1,8 +1,8 @@
 /**
  * Created by emmanuelernest on 01/11/14.
  */
-angular.module('home', ['ngCordova', 'utils.parse'])
-    .controller('HomeCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup, $ionicSideMenuDelegate, $ionicViewService, $cordovaCamera, $cordovaGeolocation, parseService) {
+angular.module('home', ['ngCordova', 'utils.parse','services.foursquare'])
+    .controller('HomeCtrl', function ($scope, $ionicModal, $timeout, $state, $ionicLoading, $ionicPopup, $ionicSideMenuDelegate, $ionicViewService, $cordovaCamera, $cordovaGeolocation, parseService, foursquareService) {
 
         $scope.hideBackButton = true;
         $scope.legTypes = [
@@ -92,6 +92,13 @@ angular.module('home', ['ngCordova', 'utils.parse'])
                     console.log('An error occured when retrieving position', error);
                     $ionicLoading.hide();
                 });
+
+            var dataF = null;
+           foursquareService.getVenues($scope.location)
+             .success(function(data){
+                   dataF = data;
+               });
+
 
         }
 

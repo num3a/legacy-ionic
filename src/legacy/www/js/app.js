@@ -13,7 +13,8 @@ angular.module('legacyApp', [
     'login',
     'utils.parse',
     'map',
-    'angularMapbox'])
+    'angularMapbox',
+    'services.foursquare'])
 
     .run(function($ionicPlatform) {
       $ionicPlatform.ready(function() {
