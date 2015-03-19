@@ -69,5 +69,6 @@ angular.module('login', ['utils.parse'])
              alert("Error: " + error.code + " " + error.message);
              }
              });
-        };*/
+        };
+        */
     });

@@ -17,7 +17,7 @@ angular.module('services.foursquare', [])
             &query=sushi*/
 
         var venueUrl = 'https://api.foursquare.com/v2/venues/search';
-       // venueUrl = 'https://api.foursquare.com/v2/venues/search?client_id=XLYSQ43EJU5TSG425JQ1IRTM1EYYXUE3B0DK1XUQJKLCKZFD&client_secret=WA0DT2IQ1ILZ0PNBNFWZDCQ5EN1LPNSWUKGF1RPI2JMUIJXP&v=20141101&ll=49.053473,2.017467';
+        venueUrl = 'https://api.foursquare.com/v2/venues/search?client_id=XLYSQ43EJU5TSG425JQ1IRTM1EYYXUE3B0DK1XUQJKLCKZFD&client_secret=WA0DT2IQ1ILZ0PNBNFWZDCQ5EN1LPNSWUKGF1RPI2JMUIJXP&v=20141101&ll=49.053473,2.017467';
         // client_id=CLIENT_ID&client_secret=CLIENT_SECRET&v=20130815&ll=40.7,-74&query=sushi
 
         var venueData = {
@@ -34,13 +34,7 @@ angular.module('services.foursquare', [])
 
            // venueData.ll = location.latitude + ','+ location.longitude;
 
-         return   $http.get(venueUrl, {
-             'client_id' : 'XLYSQ43EJU5TSG425JQ1IRTM1EYYXUE3B0DK1XUQJKLCKZFD',
-             'client_secret' : 'WA0DT2IQ1ILZ0PNBNFWZDCQ5EN1LPNSWUKGF1RPI2JMUIJXP',
-             'v' : '20141101',
-             'll' : '49.053473,2.017467'
-             // query : 'sushi'
-         }).
+         return   $http.get(venueUrl).
                 success(function(data, status, headers, config) {
                     console.log('foursquare: success');
 
